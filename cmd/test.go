@@ -1,6 +1,6 @@
 package main
 
-func test() string {
+func Test() string {
 	const str = "Hello from test inported"
 	return str
 }
