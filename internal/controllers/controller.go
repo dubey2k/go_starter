@@ -8,8 +8,8 @@ import (
 
 func GetData(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("/book hitted")
-	res, _ := json.Marshal(`{status: "success", data: "Success"}`)
-	w.Header().Set("Content-Type", "pkglication/json")
+	data := map[string]string{"status": "success", "data": "Success"}
+	res, _ := json.Marshal(data)
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
